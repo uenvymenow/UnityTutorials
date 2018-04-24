@@ -30,10 +30,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetKey(KeyCode.Space) && Time.time > nextFire)
 		{
-			shot = Instantiate (shot) as GameObject;
+			GameObject clone;
+			clone = Instantiate (shot) as GameObject;
 			nextFire = Time.time + fireRate;
-			//GameObject clone = 
-			shot.transform.position = shotSpawn.transform.position;
+
+			clone.transform.position = shotSpawn.transform.position;
 		}
 	}
 
